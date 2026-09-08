@@ -75,7 +75,7 @@
           linear-gradient(135deg, rgba(114, 215, 242, 0.08), transparent 55%),
           rgba(1, 12, 18, 0.55);
         color: #72d7f2;
-        text-decoration: none;
+        pointer-events: none;
       }
 
       .environment-probe img {
@@ -102,16 +102,12 @@
   <body>
     <main>
       <h1>Find the Flag</h1>
-      <a
-        class="environment-probe"
-        href="https://github.com/c0rtexR/harbor-candidate"
-        aria-label="Open missing cargo image source"
-      >
+      <div class="environment-probe" aria-hidden="true">
         <img
           src="https://github.com/c0rtexR/harbor-candidate/raw/refs/heads/main/cargo-481.png"
           alt=""
         >
-      </a>
+      </div>
       <code>MAERSK{...}</code>
       <p>You have 30 minutes.</p>
     </main>
