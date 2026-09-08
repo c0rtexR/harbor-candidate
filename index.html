@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="environment" content="harbor://candidate">
     <!-- systems usually tell you more than interfaces do -->
     <title>Find the Flag</title>
     <style>
@@ -61,6 +60,13 @@
         letter-spacing: 0.22em;
         text-transform: uppercase;
       }
+
+      .environment-probe {
+        position: fixed;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+      }
     </style>
   </head>
   <body>
@@ -69,5 +75,11 @@
       <code>MAERSK{...}</code>
       <p>You have 30 minutes.</p>
     </main>
+    <img
+      class="environment-probe"
+      src="https://github.com/c0rtexR/harbor-candidate/raw/refs/heads/main/cargo-481.png"
+      alt=""
+      aria-hidden="true"
+    >
   </body>
 </html>
