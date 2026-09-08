@@ -31,8 +31,10 @@
 
       main {
         width: min(86vw, 42rem);
-        padding: 3rem 1.5rem;
+        padding: 2.5rem 1.5rem;
         text-align: center;
+        display: grid;
+        justify-items: center;
       }
 
       h1 {
@@ -45,7 +47,7 @@
 
       code {
         display: block;
-        margin-top: 2rem;
+        margin-top: 1.8rem;
         color: #72d7f2;
         font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
         font-size: clamp(1rem, 3.5vw, 1.35rem);
@@ -62,24 +64,56 @@
       }
 
       .environment-probe {
-        position: fixed;
-        left: -9999px;
-        width: 1px;
-        height: 1px;
+        position: relative;
+        width: min(72vw, 26rem);
+        aspect-ratio: 16 / 10;
+        margin-top: 2.25rem;
+        overflow: hidden;
+        border: 1px solid rgba(114, 215, 242, 0.4);
+        border-radius: 0.35rem;
+        background:
+          linear-gradient(135deg, rgba(114, 215, 242, 0.08), transparent 55%),
+          rgba(1, 12, 18, 0.55);
+        color: #72d7f2;
+        text-decoration: none;
+      }
+
+      .environment-probe img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .environment-probe::after {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        content: "IMAGE UNAVAILABLE";
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 0.72rem;
+        font-weight: 650;
+        letter-spacing: 0.18em;
+        pointer-events: none;
       }
     </style>
   </head>
   <body>
     <main>
       <h1>Find the Flag</h1>
+      <a
+        class="environment-probe"
+        href="https://github.com/c0rtexR/harbor-candidate"
+        aria-label="Open missing cargo image source"
+      >
+        <img
+          src="https://github.com/c0rtexR/harbor-candidate/raw/refs/heads/main/cargo-481.png"
+          alt=""
+        >
+      </a>
       <code>MAERSK{...}</code>
       <p>You have 30 minutes.</p>
     </main>
-    <img
-      class="environment-probe"
-      src="https://github.com/c0rtexR/harbor-candidate/raw/refs/heads/main/cargo-481.png"
-      alt=""
-      aria-hidden="true"
-    >
   </body>
 </html>
